@@ -1108,7 +1108,7 @@ function updateConnectionBanner() {
         const banner = document.createElement('div');
         banner.id = 'giveme-connection-banner';
         banner.className = 'guest-banner';
-        banner.innerHTML = '<span>🔐 Prihlás sa cez Google pre uverejňovanie a plný prístup</span><a href="../login.html" target="_top">Prihlásiť</a>';
+        banner.innerHTML = '<span>🔐 Prihlás sa cez Google pre uverejňovanie a plný prístup</span><a href="/login.html" target="_top">Prihlásiť</a>';
         header.insertAdjacentElement('afterend', banner);
     }
 }

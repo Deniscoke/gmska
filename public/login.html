@@ -220,11 +220,12 @@
 
 		<div class="error-msg" id="error-msg"></div>
 
-		<a href="index.html" class="btn-skip" id="btn-skip">Hrať bez prihlásenia</a>
+		<a href="/index.html" class="btn-skip" id="btn-skip">Hrať bez prihlásenia</a>
 
 		<div class="login-setup-hint" id="login-setup-hint">
-			<details>
-				<summary>🔧 Safari/iPhone nefunguje? Pridaj túto URL:</summary>
+			<details open>
+				<summary>🔧 Presmerovanie na localhost? Pridaj túto URL do Supabase:</summary>
+				<p style="margin:8px 0 4px;font-size:11px;opacity:0.9;">Supabase Dashboard → Authentication → URL Configuration → Redirect URLs → Add URL</p>
 				<code id="redirect-url-display"></code>
 				<button type="button" class="btn-copy-url" id="btn-copy-url">Skopírovať</button>
 			</details>
@@ -306,7 +307,7 @@
 			}));
 			// Krátke oneskorenie — Supabase musí uložiť session do localStorage pred redirectom
 			await new Promise(r => setTimeout(r, 150));
-			window.location.href = 'index.html';
+			window.location.href = '/index.html';
 		}
 
 		function checkOAuthError() {
